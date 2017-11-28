@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+    <div align="center" id="masterAbaqus">
+        <canvas id="myCanvas" :width="width" :height="height" style="border:2px solid black"></canvas>
+        <br /><br />
+        <button onclick="clearArea();return false;">Clear Area</button>
+        Line width : <select id="selWidth" v-model='lineWidth'>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="9" selected="selected">9</option>
+            <option value="11">11</option>
+        </select>
+        Color : <select id="selColor" v-model='selColor'>
+            <option value="black">black</option>
+            <option value="blue">blue</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="gray">gray</option>
+        </select>
+
+        <input type="number" v-model='width'>
+        <input type="number" v-model='height'>
+
+    </div>
+
+	<script type="text/javascript" src="vue.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="socket.io.js"></script>
+    <script type="text/javascript" src="robot.js"></script>
+
+<script type="text/javascript">
+	InitThis();
+</script>
+
+</body>
+</html>
